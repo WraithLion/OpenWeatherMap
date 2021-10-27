@@ -1,5 +1,5 @@
 # OpenWeatherMap App
-Programa para visualizar el clima de los vuelos de un aereopuerto
+Programa para visualizar el clima de los vuelos hacia diferentes aereopuertos.
 
 # 1. Ejecución del programa
 
