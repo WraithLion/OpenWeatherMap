@@ -2,6 +2,8 @@ source("VuelosFiltrados.R",chdir=TRUE)
 library(curl)
 library(jsonlite)
 library(dplyr)
+library(DT)
+library(knitr)
 library("tibble")
 
     #Variable que guardará el archivo leido
@@ -98,9 +100,9 @@ for(i in 1:tamano){
 
 #Se guarda el archivo para poder tener un respaldo
 write.csv(filtrados, "Filtros/VuelosconClima.csv",row.names=FALSE)
-
-#Se muestra la información solicitada de los respectivos vuelos
-print(filtrados)
+filtrados <- read.csv("Filtros/VuelosconClima.csv")
+#Se muestra la información solicitada de los respectivos vuelos en una pestaña de navegador
+knitr::kable(filtrados)
 
 
 
